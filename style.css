@@ -108,11 +108,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .text-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 10px; padding-bottom: 5px; border-bottom: 1px solid var(--ink); font-size: 14px; font-weight: 700; }
 .text-link:hover { color: var(--accent-dark); border-color: var(--accent); }
 .project-dify { grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr); }
-.dify-visual { display: grid; grid-template-rows: .72fr 1fr; gap: 12px; padding: 18px; background: #202425; }
-.workflow-shot, .dashboard-frame { position: relative; min-height: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.13); background: #16191a; }
+.dify-visual { display: grid; grid-template-rows: .62fr .82fr .7fr; gap: 12px; padding: 18px; background: #202425; }
+.workflow-shot, .dashboard-frame, .code-frame { position: relative; min-height: 0; overflow: hidden; border: 1px solid rgba(255,255,255,.13); background: #16191a; }
 .workflow-shot img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.dashboard-frame { min-height: 270px; }
+.dashboard-frame { min-height: 220px; }
 .dashboard-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.code-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
 .method-note { margin: 22px 0 14px; padding-left: 14px; border-left: 3px solid var(--accent); color: var(--ink-2); font-size: 14px; }
 .project-vbot { min-height: 610px; }
 .vbot-visual { display: flex; align-items: center; padding: 22px; background: #dfe9e7; }
@@ -126,6 +127,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .direction-list ol { list-style: none; margin: 0; padding: 0; }
 .direction-list li { display: flex; align-items: baseline; gap: 13px; padding: 11px 0; border-top: 1px solid var(--line); font-weight: 650; }
 .direction-list li span { color: var(--accent); font-size: 11px; }
+.technical-practice { display: grid; grid-template-columns: minmax(260px, .72fr) minmax(0, 1.7fr); gap: 34px; margin-top: 30px; padding: clamp(26px, 4vw, 42px); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); }
+.technical-head { align-self: center; }
+.technical-head .section-kicker { margin-bottom: 12px; }
+.technical-head h3 { margin: 0; font-size: clamp(25px, 3vw, 34px); line-height: 1.25; letter-spacing: -.035em; }
+.technical-head > p:not(.section-kicker):not(.project-disclaimer) { margin: 18px 0 0; color: var(--ink-2); font-size: 14px; }
+.technical-gallery { display: grid; grid-template-columns: 1.25fr 1fr; gap: 14px; min-width: 0; }
+.technical-gallery figure { display: grid; grid-template-rows: minmax(0, 1fr) auto; min-width: 0; margin: 0; overflow: hidden; background: #202425; border: 1px solid var(--line); }
+.technical-gallery img { width: 100%; height: 100%; min-height: 230px; object-fit: cover; object-position: top left; }
+.technical-gallery figcaption { padding: 9px 12px; background: var(--paper); color: var(--ink-3); font-size: 11px; font-weight: 650; }
 
 .compact-heading { margin-bottom: 45px; }
 .quiet-link { margin-bottom: 6px; color: var(--ink-2); font-size: 14px; text-align: right; }
@@ -161,8 +171,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-grid { grid-template-columns: 1fr .75fr; gap: 42px; }
   .project, .project-dify { grid-template-columns: 1fr; }
   .project-dify .project-content { order: 2; }
-  .project-dify .project-visual { order: 1; min-height: 620px; }
+  .project-dify .project-visual { order: 1; min-height: 760px; }
   .project-visual { min-height: 620px; }
+  .technical-practice { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -188,7 +199,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .project-meta { display: grid; gap: 5px; }
   .project-meta span:last-child { text-align: left; }
   .project-visual, .report-visual { min-height: 420px; }
-  .dify-visual { min-height: 560px; }
+  .dify-visual { min-height: 720px; }
+  .technical-gallery { grid-template-columns: 1fr; }
+  .technical-gallery img { min-height: 0; height: auto; }
   .timeline-item { grid-template-columns: 1fr; gap: 12px; padding: 32px 0; }
   .timeline-body h3 { font-size: 24px; }
   .quiet-link { text-align: left; }
