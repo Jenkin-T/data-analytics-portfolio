@@ -140,7 +140,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .compact-heading { margin-bottom: 45px; }
 .quiet-link { margin-bottom: 6px; color: var(--ink-2); font-size: 14px; text-align: right; }
 .experience { border-bottom: 1px solid var(--line); }
-.experience .section-heading { grid-template-columns: 1fr; }
+.experience-heading { grid-template-columns: 1fr; }
 .timeline { border-top: 1px solid var(--ink); }
 .timeline-item { display: grid; grid-template-columns: 220px 1fr; gap: 65px; padding: 42px 0; border-bottom: 1px solid var(--line); }
 .timeline-when { color: var(--ink-3); font-size: 13px; letter-spacing: .04em; }
